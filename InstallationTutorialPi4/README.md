@@ -14,7 +14,7 @@ This is a tutorial for installing Ubuntu 18.04 on Raspberry PI4.
   Now let's start installing our system.
   
 ## 2. Update firmware in Raspbian
-  refer to: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/
+  refer to: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
   
   Before you install the ubuntu 18.04, you need to update the firmware of PI4.
   1. Format your micro SD card.
@@ -24,6 +24,10 @@ This is a tutorial for installing Ubuntu 18.04 on Raspberry PI4.
   2. Install Raspian to your PI4
      - Visit the Raspberry Pi [downloads page](https://www.raspberrypi.org/downloads/). click [noobs](https://www.raspberrypi.org/downloads/noobs/) then "download zip".
      - Then extract all the files in .zip file directly to your micro SD card 
+  3. Insert the SD card you’ve set up with Raspbian (via NOOBS) into the microSD card slot
+  4. Connect HDMI cable, your mouse and keyboard to PI4
+  5. Connect the power adapter, waiting for PI4 to start. Then choose Rasbian and click install.
+  6. Wait for the installation to finish (30-60 minutes). Click [here](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6) for more information during setting up.
 
 ## 3. Install Ubuntu 18.04-server
 
