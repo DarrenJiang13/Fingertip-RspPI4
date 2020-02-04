@@ -33,10 +33,17 @@ This is a tutorial for installing Ubuntu 18.04 on Raspberry PI4.
   7. Reboot the PI4. (You can either use "sudo reboot" or click the reboot button)
   
   Now you have already installed Raspbian, firmware should be updated before you installing your ubuntu.
-  8. use command:
-      sudo apt-get update && sudo apt-get dist-upgrade -y
-      sudo rpi-update
-
+  1. Install the latest firmware using this command:  
+  
+    ```bash
+    sudo apt-get update && sudo apt-get dist-upgrade -y
+    sudo rpi-update
+    ```  
+  2. Check for bootloader updates:  
+    ```bash
+    sudo rpi-eeprom-update -a
+    ```
+    
 ## 3. Install Ubuntu 18.04-server
 
 
