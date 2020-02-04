@@ -14,7 +14,8 @@ This is a tutorial for installing Ubuntu 18.04 on Raspberry PI4.
   Now let's start installing our system.
   
 ## 2. Update firmware in Raspbian
-  refer to: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3
+  refer to: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/3  
+  refer to: https://jamesachambers.com/raspberry-pi-4-ubuntu-server-desktop-18-04-3-image-unofficial/
   
   Before you install the ubuntu 18.04, you need to update the firmware of PI4.
   
@@ -34,19 +35,33 @@ This is a tutorial for installing Ubuntu 18.04 on Raspberry PI4.
   
   Now you have already installed Raspbian, firmware should be updated before you installing your ubuntu.
   1. Install the latest firmware using this command:  
-    ```bash
+  
     sudo apt-get update && sudo apt-get dist-upgrade -y
     sudo rpi-update
-    ```  
-  2. Check for bootloader updates:  
-    ```bash
-    sudo rpi-eeprom-update -a
-    ```
     
-## 3. Install Ubuntu 18.04-server
+  2. Check for bootloader updates:  
 
+    sudo rpi-eeprom-update -a
+    
+## 3. Install Ubuntu 18.04-desktop
+refer to :https://jamesachambers.com/raspberry-pi-ubuntu-server-18-04-2-installation-guide/
+  Instead of installing a ubuntu server, we choose a desktop version which seems more friendly to us.
+  1. Download ubuntu 18.04-desktop image from [here](https://github.com/TheRemote/Ubuntu-Server-raspi4-unofficial/releases).   
+  Our version is v27 release, file name :`ubuntu-18.04.3-preinstalled-desktop-arm64+raspi4.img.xz`
+  2. Extract `ubuntu-18.04.3-preinstalled-desktop-arm64+raspi4.img` outside.
+  3. Use [Win32DiskImager](https://sourceforge.net/projects/win32diskimager/) to write the img to your micro SD card. 
+    - Format your micro SD card first. If you have two cards, you can use one as your "Official Raspbian Image" and another to install ubuntu system.
+    - Choose Image File on Win32DiskImager: select the image you have just extracted
+    - Choose Device on Win32DiskImager: the location of your SD card. Select the drive on which your SD card is mounted
+    - Click "write"
+   4. Insert your micro SD card to the PI4 and power on!
 
-## 4. Install Ubuntu 18.04-desktop
-
-
-## 5. Enjoy your Ubuntu on PI!
+## 4. Enjoy your Ubuntu on PI!
+   At the first time when you enter into the ubuntu18.04-desktop the username would be `ubuntu` and the password would also be `ubuntu`. 
+   
+   When you input the password for the first time, you would be asked to set a new password.
+   - firstly you need to enter in the "(current) password", which is :`ubuntu`
+   - then you need to enter in your new password
+   - finally retype your password
+   
+   Then you will see the familiar ubuntu18.04 desktop. Congratulations!
