@@ -14,7 +14,7 @@ This is useful when you want to choose some software.
       - Click "Show Applications" in the left corner of your desktop, then search for "pylon", choose "Pylon Viewer";
       - If your camera connects successfully, you will see your device in the leftside of your screen;
       - double-click your device, then right click, choose "Continuous Shots". Now you will see a video stream in the right.
-      You will only see a messy video if you do not have a lens installed.
+      You will only see a messy video if you do not have a lens installed.  
     - Test with c++ sample code  
       ```bash
       cd /opt/pylon5/Samples/C++
@@ -37,9 +37,7 @@ This is useful when you want to choose some software.
   sudo cp bcm2711-rpi-4-b.dtb /etc/flash-kernel/dtbs
   sudo apt-get upgrade
   ```
-  4. You will not see the error message again.
-  
-
+  4. You will not see the error message any more.
 
 ## 3. install opencv
 
