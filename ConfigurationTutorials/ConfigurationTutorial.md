@@ -1,8 +1,8 @@
 # Configuration Tutorial before Running code in Ubuntu 18.04 on PI4
 
-**Attention: Architecture Difference ! ! !**
-Our Laptop: **x86**
-Raspberry Pi4: **arm**
+**Attention: Architecture Difference ! ! !**  
+Our Laptop: **x86**  
+Raspberry Pi4: **arm**  
 This is useful when you want to choose some software.
 
 ## 1.Install Pylon
@@ -32,7 +32,7 @@ This is useful when you want to choose some software.
   Couldn't find DTB bcm2711-rpi-4-b.dtb on the following paths: /etc/flash-kernel/dtbs
   ```
   2. This should be caused be a missing file. Download `bcm2711-rpi-4-b.dtb` from [here](https://github.com/raspberrypi/firmware/tree/master/boot)
-  3. `cd` to the directory where your `.dtb` file is at, then run:
+  3. `cd` to the directory where your `.dtb` file is at, then run:  
   ```bash
   sudo cp bcm2711-rpi-4-b.dtb /etc/flash-kernel/dtbs
   sudo apt-get upgrade
@@ -40,19 +40,19 @@ This is useful when you want to choose some software.
   4. You will not see the error message any more.
 
 ## 3. Install opencv [refer](http://pydeeplearning.com/opencv/install-opencv-with-c-on-ubuntu-18-04/)
-  1. The following linux command will install OpenCV on Ubuntu 18.04 with C++ libraries:
-    ```bash
+  1. The following linux command will install OpenCV on Ubuntu 18.04 with C++ libraries:  
+  ```bash
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install libopencv-dev
-    ```
-  2. Make a directory for your test.
-    ```bash
+  ```
+  2. Make a directory for your test.  
+  ```bash
     mkdir test
     cd test
-    ```
-  3. In you directory, copy the below code into a new img-display.cpp file   
-    ```c
+  ```
+  3. In you directory, copy the below code into a new `img-display.cpp` file  
+
     #include <opencv2/core/core.hpp>
     #include <opencv2/highgui/highgui.hpp>
     #include <iostream>
@@ -83,5 +83,10 @@ This is useful when you want to choose some software.
         waitKey(0);             // Wait for a keystroke in the window
         return 0;
     }
-    ```
 
+  4. Save an image from other place called `dog.jpg`, run the following commands in your `test` directory:  
+  ```bash
+    g++ img-display.cpp -o img-display `pkg-config --cflags --libs opencv`
+    ./img-display dog.jpg
+  ```
+  5. Now you will see your picture
