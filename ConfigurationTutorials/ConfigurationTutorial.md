@@ -17,7 +17,7 @@ This is useful when you want to choose some software.
         You will only see a messy video if you do not have a lens installed.  
   - Test with c++ sample code  
   ```bash
-      cd opt/pylon5/Samples/C++
+      cd /opt/pylon5/Samples/C++
       make
       ./Grab/Grab
   ```
