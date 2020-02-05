@@ -39,7 +39,7 @@ This is useful when you want to choose some software.
   ```
   4. You will not see the error message any more.
 
-## 3. Install opencv [refer](http://pydeeplearning.com/opencv/install-opencv-with-c-on-ubuntu-18-04/)
+## 3. Install opencv ([refer])(http://pydeeplearning.com/opencv/install-opencv-with-c-on-ubuntu-18-04/)
   1. The following linux command will install OpenCV on Ubuntu 18.04 with C++ libraries:  
   ```bash
     sudo apt-get update
