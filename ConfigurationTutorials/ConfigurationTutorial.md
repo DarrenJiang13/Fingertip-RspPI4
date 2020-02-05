@@ -10,17 +10,17 @@ This is useful when you want to choose some software.
   2. Click `.deb` file and the installation would begin.
   3. Connect your camera module to USB3.0 port in your PI4.
   4. Test your pylon library  
-    - Test with pylon software
+  - Test with pylon software  
       - Click "Show Applications" in the left corner of your desktop, then search for "pylon", choose "Pylon Viewer";
       - If your camera connects successfully, you will see your device in the leftside of your screen;
       - double-click your device, then right click, choose "Continuous Shots". Now you will see a video stream in the right.
-      You will only see a messy video if you do not have a lens installed.  
-    - Test with c++ sample code  
-      ```bash
+        You will only see a messy video if you do not have a lens installed.  
+  - Test with c++ sample code  
+  ```bash
       cd /opt/pylon5/Samples/C++
       make
       ./Grab/Grab
-      ```
+  ```
 ## 2. A missing file
   1. After you install your pylon, run 
   ```bash
