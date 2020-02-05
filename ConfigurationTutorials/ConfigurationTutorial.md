@@ -21,7 +21,7 @@ This is useful when you want to choose some software.
       make
       ./Grab/Grab
       ```
-## 2. a missing file
+## 2. A missing file
   1. After you install your pylon, run 
   ```bash
   sudo apt-get update
@@ -31,7 +31,7 @@ This is useful when you want to choose some software.
   ```bash
   Couldn't find DTB bcm2711-rpi-4-b.dtb on the following paths: /etc/flash-kernel/dtbs
   ```
-  2. Download `bcm2711-rpi-4-b.dtb` from [here](https://github.com/raspberrypi/firmware/tree/master/boot)
+  2. This should be caused be a missing file. Download `bcm2711-rpi-4-b.dtb` from [here](https://github.com/raspberrypi/firmware/tree/master/boot)
   3. `cd` to the directory where your `.dtb` file is at, then run:
   ```bash
   sudo cp bcm2711-rpi-4-b.dtb /etc/flash-kernel/dtbs
@@ -39,5 +39,49 @@ This is useful when you want to choose some software.
   ```
   4. You will not see the error message any more.
 
-## 3. install opencv
+## 3. Install opencv [refer](http://pydeeplearning.com/opencv/install-opencv-with-c-on-ubuntu-18-04/)
+  1. The following linux command will install OpenCV on Ubuntu 18.04 with C++ libraries:
+    ```bash
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install libopencv-dev
+    ```
+  2. Make a directory for your test.
+    ```bash
+    mkdir test
+    cd test
+    ```
+  3. In you directory, copy the below code into a new img-display.cpp file   
+    ```c
+    #include <opencv2/core/core.hpp>
+    #include <opencv2/highgui/highgui.hpp>
+    #include <iostream>
+
+    using namespace cv;
+    using namespace std;
+
+    int main( int argc, char** argv )
+    {
+        if( argc != 2)
+        {
+         cout <<" Usage: display_image ImageToLoadAndDisplay" << endl;
+         return -1;
+        }
+
+        Mat image;
+        image = imread(argv[1], CV_LOAD_IMAGE_COLOR);   // Read the file
+
+        if(! image.data )                              // Check for invalid input
+        {
+            cout << "Could not open or find the image" << std::endl ;
+            return -1;
+        }
+
+        namedWindow( "Display window", WINDOW_AUTOSIZE );// Create a window for display.
+        imshow( "Display window", image );                // Show our image inside it.
+
+        waitKey(0);             // Wait for a keystroke in the window
+        return 0;
+    }
+    ```
 
