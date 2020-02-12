@@ -94,17 +94,17 @@ This is useful when you want to choose some software.
 ## 4. Run codes.
   1. git clone codes from [here](https://github.com/enginerd887/domeTracker)
       
-      git clone https://github.com/enginerd887/domeTracker  
+  git clone https://github.com/enginerd887/domeTracker  
       
   2. make it
   
-      cd domeTracker  
-      make clean  
-      make  
+  cd domeTracker  
+  make clean  
+  make  
       
   3. run your program
       
-      sudo su
-      ./blobTracker
+  sudo su
+  ./blobTracker
       
   4. Successed! (Though slow yet.)
