@@ -73,3 +73,7 @@ Luckily, if you have a solidworks model, you can find a open-source plugin which
      
             gcc -o test test.c -lGL -lGLU -lglut
             ./test
+            
+- Install Blender
+    1. Download Blender from its [website](https://www.blender.org/download/) or from ubuntu software store
+    2.
