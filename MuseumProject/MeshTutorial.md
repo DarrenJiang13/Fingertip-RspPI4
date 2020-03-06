@@ -69,7 +69,7 @@ Luckily, if you have a solidworks model, you can find a open-source plugin which
             return 0;
         }  
     ```
-        4. Compile your program and run it.
-        
+     4. Compile your program and run it.
+     
             gcc -o test test.c -lGL -lGLU -lglut
             ./test
